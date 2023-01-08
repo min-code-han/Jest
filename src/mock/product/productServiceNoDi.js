@@ -1,17 +1,13 @@
-const ProductClient = require("./productClient")
+const ProductClient = require('./productClient');
 
 class ProductService {
-    constructor() {
-        this.ProductClient = new ProductClient();
-    }
+  constructor() {
+    this.ProductClient = new ProductClient();
+  }
 
-    fetchAvailableItems(){
-        return this.ProductClient
-            .fetchItems()
-            .then(items => items.filter((item) => item.available))
-    }
+  fetchAvailableItems() {
+    return this.ProductClient.fetchItems().then((items) => items.filter((item) => item.available));
+  }
 }
 
 module.exports = ProductService;
-
-
