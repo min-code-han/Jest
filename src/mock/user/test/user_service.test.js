@@ -1,5 +1,5 @@
-const UserService = require('../../../../../../../../Downloads/3.17-unit-basic/src/mock/user/user_service');
-const UserClient = require('../../../../../../../../Downloads/3.17-unit-basic/src/mock/user/user_client');
+const UserClient = require('../user_client');
+const UserService = require('../user_service');
 jest.mock('../user_client');
 
 describe('UserService', () => {
